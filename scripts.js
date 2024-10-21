@@ -8,10 +8,10 @@
 //------------------------------------------------------------------------------
 // Fastar
 
-/** Íslenskir sérhljóðar */
+/** Íslenskir samhljóðar */
 const CONSONANTS = 'bcdfghjklmnpqrstvwxz'.split('');
 
-/** Íslenskir samhljóðar */
+/** Íslenskir sérhljóðar */
 const VOWELS = 'aeiouyáéýúíóöæ'.split('');
 
 //------------------------------------------------------------------------------
@@ -58,6 +58,7 @@ function longest(str) {
   let longestWord = '';
   for (const word of words) {
     if (word.length > longestWord.length) {
+      debugger;
       longestWord = word;
     }
   }
@@ -80,6 +81,11 @@ console.assert(
   'longest: skilar tómum streng ef tómur strengur er gefinn',
 );
 
+/**
+ *
+ * @param {unknown} str
+ * @returns {string | null}
+ */
 function shortest(str) {
   if (!isString(str)) {
     return null;
